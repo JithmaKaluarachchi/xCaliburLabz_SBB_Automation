@@ -1,0 +1,1 @@
+export function advertisementData(stamp=Date.now()){const title=`AUTO Advertisement ${stamp}`;return{title,editedTitle:`${title} Edited`,url:`https://example.com/auto-ad-${stamp}`,editedUrl:`https://example.com/updated-ad-${stamp}`};}export const invalidAdvertisementData={url:'not-a-url'}as const;

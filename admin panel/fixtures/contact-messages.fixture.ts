@@ -1,0 +1,1 @@
+import{test as base}from'@playwright/test';import{ContactMessagesPage}from'../pages/contact-messages.page';export const test=base.extend<{contactMessages:ContactMessagesPage}>({contactMessages:async({page},use)=>use(new ContactMessagesPage(page))});export{expect}from'@playwright/test';

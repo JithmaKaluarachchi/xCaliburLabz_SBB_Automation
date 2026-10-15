@@ -1,0 +1,1 @@
+import{test,expect}from'../../../fixtures/contact-cards.fixture';test('CARDS-NF-PERF-001 page loads within ten seconds @contact-cards @nonfunctional @performance',async({contactCards})=>{const start=Date.now();await contactCards.open();expect(Date.now()-start).toBeLessThan(10000)});

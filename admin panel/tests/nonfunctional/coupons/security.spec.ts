@@ -1,0 +1,1 @@
+import {test,expect} from '../../../fixtures/coupons.fixture';test('COUPON-NF-SEC-001 authenticated HTTPS route @coupons @nonfunctional @security',async({page,coupons})=>{await coupons.open();expect(page.url()).toMatch(/^https:\/\//);expect(new URL(page.url()).pathname.replace(/\/$/,'')).toBe('/admin/coupons');expect(page.url()).not.toContain('/admin/login');});

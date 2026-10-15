@@ -1,0 +1,1 @@
+import{test,expect}from'../../../fixtures/inventory.fixture';test('INV-NF-SEC-001 authenticated HTTPS inventory route @inventory @nonfunctional',async({page,inventory})=>{await inventory.open();expect(page.url()).toMatch(/^https:\/\/sbb\.caliburlabz\.com\/admin\/inventory\/?$/);await expect(page).not.toHaveURL(/login/i)});

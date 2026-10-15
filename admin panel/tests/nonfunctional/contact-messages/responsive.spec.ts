@@ -1,0 +1,1 @@
+import{test,expect}from'../../../fixtures/contact-messages.fixture';test('CONTACT-NF-RESP-001 inbox avoids document overflow @contact-messages @nonfunctional',async({page,contactMessages})=>{await contactMessages.open();const s=await page.evaluate(()=>({v:document.documentElement.clientWidth,c:document.documentElement.scrollWidth}));expect(s.c).toBeLessThanOrEqual(s.v+1)});

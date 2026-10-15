@@ -1,0 +1,28 @@
+# Installed dependencies and downloaded browser binaries
+**/node_modules/
+**/.pw-browsers/
+**/playwright/.cache/
+
+# Local secrets and authentication state
+**/.env
+**/.env.*
+!**/.env.example
+**/storage-state*.json
+**/auth/
+
+# Generated browser reports and temporary artifacts
+**/playwright-report/
+**/test-results/
+**/blob-report/
+**/tmp/
+**/.tmp/
+**/*.log
+**/__pycache__/
+**/*.py[cod]
+
+# Admin output includes generated reports and may contain captured data
+admin panel/output/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db

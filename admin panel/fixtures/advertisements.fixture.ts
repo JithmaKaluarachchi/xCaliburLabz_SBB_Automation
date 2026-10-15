@@ -1,0 +1,1 @@
+import{test as base}from'@playwright/test';import{AdvertisementsPage}from'../pages/advertisements.page';export const test=base.extend<{advertisements:AdvertisementsPage}>({advertisements:async({page},use)=>use(new AdvertisementsPage(page))});export{expect}from'@playwright/test';

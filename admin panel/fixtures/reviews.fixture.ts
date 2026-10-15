@@ -1,0 +1,1 @@
+import{test as base}from'@playwright/test';import{ReviewsPage}from'../pages/reviews.page';export const test=base.extend<{reviews:ReviewsPage}>({reviews:async({page},use)=>use(new ReviewsPage(page))});export{expect}from'@playwright/test';

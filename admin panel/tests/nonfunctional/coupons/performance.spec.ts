@@ -1,0 +1,1 @@
+import {test,expect} from '../../../fixtures/coupons.fixture';test('COUPON-NF-PERF-001 loads within ten seconds @coupons @nonfunctional @performance',async({coupons},testInfo)=>{const start=Date.now();await coupons.open();const ms=Date.now()-start;await testInfo.attach('coupons-load.txt',{body:`${ms} ms`,contentType:'text/plain'});expect(ms).toBeLessThan(10000);});

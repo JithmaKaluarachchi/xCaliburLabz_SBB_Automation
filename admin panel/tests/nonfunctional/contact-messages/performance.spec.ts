@@ -1,0 +1,1 @@
+import{test,expect}from'../../../fixtures/contact-messages.fixture';test('CONTACT-NF-PERF-001 authenticated inbox is ready within 10 seconds @contact-messages @nonfunctional',async({contactMessages})=>{const start=Date.now();await contactMessages.open();expect(Date.now()-start).toBeLessThan(10000)});

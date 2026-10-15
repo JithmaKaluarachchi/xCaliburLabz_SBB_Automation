@@ -1,0 +1,1 @@
+import{test,expect}from'../../../fixtures/shipping.fixture';test('SHIP-NF-RESP-001 fits viewport @shipping @nonfunctional @responsive',async({page,shipping})=>{await shipping.open();const s=await page.evaluate(()=>({v:document.documentElement.clientWidth,c:document.documentElement.scrollWidth}));expect(s.c).toBeLessThanOrEqual(s.v+1);});

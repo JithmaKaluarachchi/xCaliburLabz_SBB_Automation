@@ -1,0 +1,1 @@
+import{test,expect}from'../../../fixtures/inventory.fixture';test('INV-NF-RESP-001 avoids document overflow @inventory @nonfunctional',async({page,inventory})=>{await inventory.open();const s=await page.evaluate(()=>({v:document.documentElement.clientWidth,c:document.documentElement.scrollWidth}));expect(s.c).toBeLessThanOrEqual(s.v+1)});

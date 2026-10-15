@@ -1,0 +1,1 @@
+import{test,expect}from'../../../fixtures/reviews.fixture';test('REV-NF-SEC-001 uses authenticated HTTPS admin route @reviews @nonfunctional @security',async({page,reviews})=>{await reviews.open();expect(page.url()).toMatch(/^https:\/\//);expect(new URL(page.url()).pathname.replace(/\/$/,'')).toBe('/admin/reviews');expect(page.url()).not.toContain('/admin/login');});

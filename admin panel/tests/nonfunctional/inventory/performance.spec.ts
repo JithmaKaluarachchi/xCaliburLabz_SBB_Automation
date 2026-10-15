@@ -1,0 +1,1 @@
+import{test,expect}from'../../../fixtures/inventory.fixture';test('INV-NF-PERF-001 page loads within ten seconds @inventory @nonfunctional',async({inventory})=>{const s=Date.now();await inventory.open();expect(Date.now()-s).toBeLessThan(10000)});

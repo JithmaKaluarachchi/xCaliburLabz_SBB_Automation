@@ -1,0 +1,1 @@
+import{test,expect}from'../../../fixtures/contact-cards.fixture';test('CARDS-NF-SEC-001 remains authenticated over HTTPS @contact-cards @nonfunctional',async({page,contactCards})=>{await contactCards.open();expect(page.url()).toMatch(/^https:\/\/sbb\.caliburlabz\.com\/admin\/contact-cards\/?$/);await expect(page).not.toHaveURL(/login/i)});

@@ -1,0 +1,1 @@
+import{test,expect}from'../../../fixtures/contact-messages.fixture';test('CONTACT-NF-SEC-001 contact inbox remains authenticated over HTTPS @contact-messages @nonfunctional',async({page,contactMessages})=>{await contactMessages.open();expect(page.url()).toMatch(/^https:\/\/sbb\.caliburlabz\.com\/admin\/contact\/?$/);await expect(page).not.toHaveURL(/login/i)});

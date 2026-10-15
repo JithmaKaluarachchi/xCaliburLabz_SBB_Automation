@@ -1,0 +1,1 @@
+import{test,expect}from'../../../fixtures/shipping.fixture';test('SHIP-NF-PERF-001 loads under ten seconds @shipping @nonfunctional @performance',async({shipping},info)=>{const s=Date.now();await shipping.open();const ms=Date.now()-s;await info.attach('shipping-load.txt',{body:`${ms} ms`,contentType:'text/plain'});expect(ms).toBeLessThan(10000);});

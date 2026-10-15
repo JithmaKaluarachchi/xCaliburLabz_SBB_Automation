@@ -1,0 +1,2 @@
+export function shippingMethodData(stamp=Date.now()){const name=`AUTO Shipping ${stamp}`;return{name,editedName:`${name} Edited`,description:'Automation delivery method.',editedDescription:'Updated automation delivery method.',price:'650',editedPrice:'750',sort:'25',minDays:'2',maxDays:'5'};}
+export const shippingInvalidData={negativePrice:'-1',negativeDays:'-1',invalidRange:{min:'7',max:'2'}}as const;

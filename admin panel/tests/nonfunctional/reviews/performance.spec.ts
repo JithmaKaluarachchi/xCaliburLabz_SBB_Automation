@@ -1,0 +1,1 @@
+import{test,expect}from'../../../fixtures/reviews.fixture';test('REV-NF-PERF-001 page loads under ten seconds @reviews @nonfunctional @performance',async({reviews},info)=>{const start=Date.now();await reviews.open();const ms=Date.now()-start;await info.attach('reviews-load.txt',{body:`${ms} ms`,contentType:'text/plain'});expect(ms).toBeLessThan(10000);});

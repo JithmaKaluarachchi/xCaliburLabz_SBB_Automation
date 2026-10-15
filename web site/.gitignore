@@ -1,0 +1,10 @@
+node_modules/
+.env
+playwright-report/
+test-results/
+blob-report/
+playwright/.cache/
+.pw-browsers/
+*.log
+tmp/pdfs/
+.DS_Store

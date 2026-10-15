@@ -1,0 +1,1 @@
+import{test as base}from'@playwright/test';import{ShippingPage}from'../pages/shipping.page';export const test=base.extend<{shipping:ShippingPage}>({shipping:async({page},use)=>use(new ShippingPage(page))});export{expect}from'@playwright/test';

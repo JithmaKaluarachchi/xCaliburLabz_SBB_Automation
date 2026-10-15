@@ -1,0 +1,1 @@
+import {test,expect} from '../../../fixtures/coupons.fixture';test('COUPON-NF-RESP-001 fits viewport @coupons @nonfunctional @responsive',async({page,coupons})=>{await coupons.open();const s=await page.evaluate(()=>({v:document.documentElement.clientWidth,c:document.documentElement.scrollWidth}));expect(s.c).toBeLessThanOrEqual(s.v+1);});

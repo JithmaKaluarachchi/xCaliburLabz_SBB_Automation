@@ -1,0 +1,1 @@
+import{test,expect}from'../../../fixtures/shipping.fixture';test('SHIP-NF-SEC-001 authenticated HTTPS route @shipping @nonfunctional @security',async({page,shipping})=>{await shipping.open();expect(page.url()).toMatch(/^https:\/\//);expect(new URL(page.url()).pathname.replace(/\/$/,'')).toBe('/admin/shipping');expect(page.url()).not.toContain('/admin/login');});

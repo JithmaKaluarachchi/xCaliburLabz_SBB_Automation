@@ -1,0 +1,1 @@
+import{test,expect}from'../../../fixtures/reviews.fixture';test('REV-NF-RESP-001 listing fits viewport @reviews @nonfunctional @responsive',async({page,reviews})=>{await reviews.open();const s=await page.evaluate(()=>({v:document.documentElement.clientWidth,c:document.documentElement.scrollWidth}));expect(s.c).toBeLessThanOrEqual(s.v+1);});
